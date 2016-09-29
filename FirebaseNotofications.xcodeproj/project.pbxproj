@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B817E3F0E6D2AFE69E9D874C /* Pods_FirebaseNotofications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D89D0510C5BB1628A69AE84 /* Pods_FirebaseNotofications.framework */; };
 		BD84A3531D9BBDF500FB339E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD84A3521D9BBDF500FB339E /* AppDelegate.swift */; };
 		BD84A3551D9BBDF500FB339E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD84A3541D9BBDF500FB339E /* ViewController.swift */; };
 		BD84A3581D9BBDF500FB339E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD84A3561D9BBDF500FB339E /* Main.storyboard */; };
 		BD84A35A1D9BBDF500FB339E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD84A3591D9BBDF500FB339E /* Assets.xcassets */; };
 		BD84A35D1D9BBDF500FB339E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD84A35B1D9BBDF500FB339E /* LaunchScreen.storyboard */; };
+		BD84A3651D9BBED200FB339E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD84A3641D9BBED200FB339E /* GoogleService-Info.plist */; };
+		BDFA213E1D9C496B00343936 /* Data+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFA213D1D9C496B00343936 /* Data+HexString.swift */; };
+		BDFA215B1D9C562D00343936 /* myownconference.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFA215A1D9C562D00343936 /* myownconference.png */; };
+		BDFA215D1D9C5A8A00343936 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDFA215C1D9C5A8A00343936 /* 1.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27E2797C4CEA497F5199D201 /* Pods-FirebaseNotofications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotofications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNotofications/Pods-FirebaseNotofications.debug.xcconfig"; sourceTree = "<group>"; };
+		3D89D0510C5BB1628A69AE84 /* Pods_FirebaseNotofications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseNotofications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54427B06DD391E47BD627254 /* Pods-FirebaseNotofications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotofications.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseNotofications/Pods-FirebaseNotofications.release.xcconfig"; sourceTree = "<group>"; };
 		BD84A34F1D9BBDF500FB339E /* FirebaseNotofications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseNotofications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD84A3521D9BBDF500FB339E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD84A3541D9BBDF500FB339E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		BD84A3591D9BBDF500FB339E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD84A35C1D9BBDF500FB339E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD84A35E1D9BBDF500FB339E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD84A3641D9BBED200FB339E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDFA213D1D9C496B00343936 /* Data+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+HexString.swift"; sourceTree = "<group>"; };
+		BDFA215A1D9C562D00343936 /* myownconference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myownconference.png; sourceTree = "<group>"; };
+		BDFA215C1D9C5A8A00343936 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B817E3F0E6D2AFE69E9D874C /* Pods_FirebaseNotofications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BFF595A412067C6ED9A98FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D89D0510C5BB1628A69AE84 /* Pods_FirebaseNotofications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		929F1CA97F5C4ED24315E9BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27E2797C4CEA497F5199D201 /* Pods-FirebaseNotofications.debug.xcconfig */,
+				54427B06DD391E47BD627254 /* Pods-FirebaseNotofications.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD84A3461D9BBDF500FB339E = {
 			isa = PBXGroup;
 			children = (
 				BD84A3511D9BBDF500FB339E /* FirebaseNotofications */,
 				BD84A3501D9BBDF500FB339E /* Products */,
+				929F1CA97F5C4ED24315E9BC /* Pods */,
+				1BFF595A412067C6ED9A98FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +86,26 @@
 		BD84A3511D9BBDF500FB339E /* FirebaseNotofications */ = {
 			isa = PBXGroup;
 			children = (
+				BDFA21591D9C53D100343936 /* Images */,
 				BD84A3521D9BBDF500FB339E /* AppDelegate.swift */,
 				BD84A3541D9BBDF500FB339E /* ViewController.swift */,
+				BDFA213D1D9C496B00343936 /* Data+HexString.swift */,
 				BD84A3561D9BBDF500FB339E /* Main.storyboard */,
 				BD84A3591D9BBDF500FB339E /* Assets.xcassets */,
 				BD84A35B1D9BBDF500FB339E /* LaunchScreen.storyboard */,
 				BD84A35E1D9BBDF500FB339E /* Info.plist */,
+				BD84A3641D9BBED200FB339E /* GoogleService-Info.plist */,
 			);
 			path = FirebaseNotofications;
+			sourceTree = "<group>";
+		};
+		BDFA21591D9C53D100343936 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BDFA215C1D9C5A8A00343936 /* 1.gif */,
+				BDFA215A1D9C562D00343936 /* myownconference.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD84A3611D9BBDF500FB339E /* Build configuration list for PBXNativeTarget "FirebaseNotofications" */;
 			buildPhases = (
+				89F2B36F106E9A079776B421 /* 📦 Check Pods Manifest.lock */,
 				BD84A34B1D9BBDF500FB339E /* Sources */,
 				BD84A34C1D9BBDF500FB339E /* Frameworks */,
 				BD84A34D1D9BBDF500FB339E /* Resources */,
+				DEDC089AFD2437BB748214A2 /* 📦 Embed Pods Frameworks */,
+				3E4E5AFE0C0324224690846B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,19 +171,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFA215D1D9C5A8A00343936 /* 1.gif in Resources */,
 				BD84A35D1D9BBDF500FB339E /* LaunchScreen.storyboard in Resources */,
+				BD84A3651D9BBED200FB339E /* GoogleService-Info.plist in Resources */,
 				BD84A35A1D9BBDF500FB339E /* Assets.xcassets in Resources */,
 				BD84A3581D9BBDF500FB339E /* Main.storyboard in Resources */,
+				BDFA215B1D9C562D00343936 /* myownconference.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E4E5AFE0C0324224690846B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseNotofications/Pods-FirebaseNotofications-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89F2B36F106E9A079776B421 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEDC089AFD2437BB748214A2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseNotofications/Pods-FirebaseNotofications-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD84A34B1D9BBDF500FB339E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFA213E1D9C496B00343936 /* Data+HexString.swift in Sources */,
 				BD84A3551D9BBDF500FB339E /* ViewController.swift in Sources */,
 				BD84A3531D9BBDF500FB339E /* AppDelegate.swift in Sources */,
 			);
@@ -259,6 +358,7 @@
 		};
 		BD84A3621D9BBDF500FB339E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E2797C4CEA497F5199D201 /* Pods-FirebaseNotofications.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JK729JZ89;
@@ -272,6 +372,7 @@
 		};
 		BD84A3631D9BBDF500FB339E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54427B06DD391E47BD627254 /* Pods-FirebaseNotofications.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JK729JZ89;
@@ -302,6 +403,7 @@
 				BD84A3631D9BBDF500FB339E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,16 +7,90 @@
 //
 
 import UIKit
+import UserNotifications
+
+import Firebase
+import FirebaseMessaging
+import FirebaseInstanceID
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, FIRMessagingDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        guard let imageURL = Bundle.main.url(forResource: "1", withExtension: "gif") else {
+            return true
+        }
+        
+        let attachment = try! UNNotificationAttachment(identifier: "1", url: imageURL, options: .none)
+        
+        let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "conference"
+        content.title = "Новое сообщение! 💩"
+        content.subtitle = "Это тестовое сообщение с изображением"
+        content.body = "Myownconferne тестовая нотификация с помощью firebase"
+        content.attachments = [attachment, attachment]
+        
+        let request = UNNotificationRequest(
+            identifier: "1", content: content, trigger: nil)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }else{
+                print("notification added")
+            }
+        })
+        
+        UNUserNotificationCenter.current().delegate = self
+        FIRMessaging.messaging().remoteMessageDelegate = self
+        
+        application.registerForRemoteNotifications()
+        
+        FIRApp.configure()
+        
+        FIRMessaging.messaging().connect { (error) in
+            if (error != nil) {
+                print("Unable to connect with FCM. \(error)")
+            } else {
+                print("Connected to FCM.")
+            }
+        }
+        
         return true
+    }
+    
+    func applicationReceivedRemoteMessage(_ remoteMessage: FIRMessagingRemoteMessage) {
+        print("%@", remoteMessage.appData)
+        guard let imageURL = Bundle.main.url(forResource: "myownconference", withExtension: "png") else {
+            return
+        }
+        
+        let attachment = try! UNNotificationAttachment(identifier:
+            "myownconference", url: imageURL, options: .none)
+        
+        let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "conference"
+        content.title = "New notification! 💩"
+        content.subtitle = "This is new notification with animated image"
+        content.body = "This is new notification with animated image with firebase"
+        content.attachments = [attachment]
+        
+        let request = UNNotificationRequest(
+            identifier: "myownconference", content: content, trigger: nil)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print(error)
+            }else{
+                print("notification added")
+            }
+        })
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +114,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        NotificationCenter.default.post(name:NSNotification.Name(rawValue: "com.akovana.FirebaseNotifications"), object: .none)
+        completionHandler(.alert)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Response received for \(response.actionIdentifier)")
+        completionHandler()
+    }
+}
+
+extension AppDelegate {
+    @nonobjc func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Registration for remote notifications failed")
+        print(error.localizedDescription)
+    }
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Registered with device token: \(deviceToken.hexString)")
+    }
 }
 
